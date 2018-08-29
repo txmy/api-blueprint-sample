@@ -1,0 +1,51 @@
+FORMAT: 1A
+
+# Polls
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+
+# Group Get Request Sample
+
+Resources related to questions in the API.
+
+## GET Sample [/getsample]
+
+### List All Questions [GET]
++ Response 200 (application/json)
+
+    + Attributes (array[Question])
+
+### Data Structures
+
+### Question
++ question: Favourite programming language? (required)
++ published_at: `2014-11-11T08:40:51.620Z` (required)
++ url: /questions/1 (required)
++ choices (array[Choice], required)
+
+### Choice
++ choice: Javascript (required)
++ url: /questions/1/choices/1 (required)
++ votes: 2048 (number, required)
+
+
+# Group Post Request Sample
+
+## POST Sample [/postsample]
+### Create a New Question [POST]
+サンプルテキスト
+
++ Request (application/json)
+
+    + Attributes
+
+        + question: Favourite Language? (required)
+        + choices: Swift, `Objective-C` (array, required)
+
++ Response 200 (application/json)
+
+  + Attributes
+
+        + result: hoge (string) - hogeです〜
+        + code: 0 (number) - ufga
